@@ -2,7 +2,7 @@ import joblib
 
 class Encoder():
     def __init__(self,data : dict = {}) -> None:
-        self.df_for_prediction = joblib.load('/Users/igorafanasIev/Desktop/becode_projects/immoeliza_deployment/data/empty_df.joblib')
+        self.df_for_prediction = joblib.load('data/empty_df.joblib')
         self.new_row = None
         self.user_row = data
         print(self.user_row)
