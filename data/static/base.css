@@ -17,3 +17,10 @@ img {
     height: auto;
 }
 
+a {
+    color: black;
+}
+
+a:hover {
+    color: blueviolet;
+}

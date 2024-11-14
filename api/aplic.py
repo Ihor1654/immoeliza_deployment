@@ -95,10 +95,8 @@ async def submit_form(request : Request,
             state_of_building = state_of_building,
             equipped_kitchen = equipped_kitchen)
     except ValueError as e:
-        print(2)
         context['error_msg'] = 'Something wrong with postal_code'
         return templates.TemplateResponse("base.html", context)
-    print(dict(form_data))
     predictor = Predictor(form_data=dict(form_data))
     prediction = predictor.model_selection()
     match form_data.modelchoise:
