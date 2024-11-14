@@ -9,7 +9,7 @@ COPY . .
 
 # Update pip
 RUN python -m pip install --upgrade pip
-RUN pip install --no-cashe-dir -r requirements.txt $$ echo "All Installed"
+RUN pip install --no-cache-dir -r requirements.txt && echo "All Installed"
 
 # Run the app
 # Set host to 0.0.0.0 to make it run on the container's network
