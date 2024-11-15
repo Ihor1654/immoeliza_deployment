@@ -3,6 +3,7 @@
 ![Fastapi](https://img.shields.io/badge/uses-Fast_api-violet?logo=fastapi&color=%23009688)
 ![HTML5](https://img.shields.io/badge/Made_with-HTML-blue?logo=html5&labelColor=%23778899&color=%23E34F26)
 ![Bootstrap](https://img.shields.io/badge/uses-bootstrap-violet?logo=bootstrap&labelColor=%23778899&color=%237952B3)
+![Docker](https://img.shields.io/badge/uses-Docker-orange?logo=docker&labelColor=%23778899&color=%232496ED)
 
 
 ## 🔎 **Project Overview**
