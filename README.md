@@ -1,4 +1,4 @@
-![Bootstrap](https://www.svgrepo.com/show/303293/bootstrap-4-logo.svg)
+![Bootstrap](https://img.shields.io/badge/uses-bootstrap-violet?color=%239461fb)
 ![Python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)
 ![Pandas](https://img.shields.io/badge/uses-Pandas-blue.svg)
 🔎 **Project Overview**
