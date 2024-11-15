@@ -1,6 +1,10 @@
-![Bootstrap](https://img.shields.io/badge/uses-bootstrap-violet?color=%239461fb)
-![Python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)
-![Pandas](https://img.shields.io/badge/uses-Pandas-blue.svg)
+![Python](https://img.shields.io/badge/Made_with-Python-blue?logo=python&labelColor=%23778899&color=%233776AB)
+![Pandas](https://img.shields.io/badge/uses-Pandas-blue?logo=pandas&labelColor=%23778899&color=%23150458)
+![Fastapi](https://img.shields.io/badge/uses-Fast_api-violet?logo=fastapi&color=%23009688)
+![HTML5](https://img.shields.io/badge/Made_with-HTML-blue?logo=html5&labelColor=%23778899&color=%23E34F26)
+![Bootstrap](https://img.shields.io/badge/uses-bootstrap-violet?logo=bootstrap&labelColor=%23778899&color=%237952B3)
+
+
 🔎 **Project Overview**
 This web service provides the user with the ability to predict real estate prices in Belgium using one of the available models. The primary objective is to provide accurate price estimates for properties based on their features like location, area, number of rooms, etc.
 
