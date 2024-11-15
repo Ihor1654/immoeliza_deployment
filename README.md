@@ -5,10 +5,10 @@
 ![Bootstrap](https://img.shields.io/badge/uses-bootstrap-violet?logo=bootstrap&labelColor=%23778899&color=%237952B3)
 
 
-🔎 **Project Overview**
+## 🔎 **Project Overview**
 This web service provides the user with the ability to predict real estate prices in Belgium using one of the available models. The primary objective is to provide accurate price estimates for properties based on their features like location, area, number of rooms, etc.
 
-🤖 **Models**
+## 🤖 **Models**
 
 Prediction is possible using one of the following models:
 - XGBoost
