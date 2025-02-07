@@ -4,7 +4,7 @@ import markdown
 from pathlib import Path
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, constr,field_validator,ValidationError
-import data.config
+# import data.config
 from fastapi.responses import HTMLResponse
 from typing import Optional
 from.predict import Predictor
@@ -36,17 +36,46 @@ class FormData(BaseModel):
 
 
 
+SUBTYPE_LIST = ['APARTMENT','APARTMENT_BLOCK','BUNGALOW','CASTLE','CHALET','COUNTRY_COTTAGE','DUPLEX','EXCEPTIONAL_PROPERTY','FARMHOUSE','FLAT_STUDIO','GROUND_FLOOR','HOUSE','KOT','LOFT','MANOR_HOUSE','MANSION','MIXED_USE_BUILDING','OTHER_PROPERTY','PENTHOUSE','SERVICE_FLAT','TOWN_HOUSE','TRIPLEX','VILLA']
 
 
 app = FastAPI()
 subtype_options_html = "\n".join(
     f'<option value="{item}">{item.replace("_", " ").capitalize()}</option>'
-    for item in data.config.SUBTYPE_LIST
+    for item in SUBTYPE_LIST
 )
-# Указываем правильную директорию для шаблонов
 templates = Jinja2Templates(directory="api/templates")
-config = data.config.config
-# Монтируем статические файлы
+config = {
+    "living_area_range": {
+        "min": 10,  
+        "max": 2000, 
+        "step": 1,
+        "mode":159
+        
+    },
+    "land_area_range": {
+        "min": 0,
+        "max": 2500,
+        "step": 1
+    },
+    "garden_range": {
+        "min": 0,
+        "max": 1000,
+        "step": 1
+    },
+    "terrace_surface_range": {
+        "min": 0,
+        "max": 300,
+        "step": 1
+    },
+    "num_of_room_range": {
+        "min": 1,
+        "max": 20,
+        "step": 1,
+        "mode": 3
+    },
+
+}
 app.mount("/static", StaticFiles(directory="data/static"), name="static")
 about_md = Path("data/static/About.md").read_text()
 html_content = markdown.markdown(about_md)

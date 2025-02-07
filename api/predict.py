@@ -10,9 +10,9 @@ class Predictor:
             self.df_to_predict = self.user_data_encoder.csv_encode()
         else:
             self.df_to_predict,self.model_name = self.user_data_encoder.entrie_encode()
-        self.linear = joblib.load('data/models/linear_regression_model.joblib')
+        self.linear = joblib.load('/app/data/models/linear_regression_model.joblib')
         self.xgboost = xgboost.XGBRegressor()
-        self.xgboost.load_model('data/models/Xgbtrained.json')
+        self.xgboost.load_model('/app/data/models/Xgbtrained.json')
         
         self.prediction = None
         self.predicted = False

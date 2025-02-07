@@ -1,0 +1,24 @@
+FROM python:3.12
+
+
+# Define /app as the working directory
+WORKDIR /app
+
+# # Copy all the files in the current directory in /app
+# COPY . .
+COPY requirements.txt .
+
+# Update pip
+RUN python -m pip install --upgrade pip
+RUN pip install --no-cache-dir -r requirements.txt && echo "All Installed"
+
+# # Run the app
+# CMD uvicorn api.aplic:app --host 0.0.0.0
+
+COPY api /app/api
+COPY data /app/data
+COPY data/models /app/data/models
+
+
+EXPOSE 8000
+CMD ["uvicorn", "api.aplic:app", "--host", "0.0.0.0", "--port", "8000"]
